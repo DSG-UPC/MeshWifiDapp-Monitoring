@@ -5,3 +5,7 @@ This repository contain the monitoring part of the project. It is divided into t
 * Prometheus Dockerfile to start a standalone server in seconds. Once running, this server will make API calls to the           different nodes periodically to obtain the data that will be used to compute the rewards for these nodes.
 
 Each folder contains its own README explaining the needed steps to execute the module.
+
+## Docker deployment
+
+Both services are integrated with Docker, so make sure that, if you want to use them (at least Prometheus server) you have [docker installed](https://docs.docker.com/install/))
