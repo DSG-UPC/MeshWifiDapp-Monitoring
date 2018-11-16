@@ -8,4 +8,4 @@ Each folder contains its own README explaining the needed steps to execute the m
 
 ## Docker deployment
 
-Both services are integrated with Docker, so make sure that, if you want to use them (at least Prometheus server) you have [docker installed](https://docs.docker.com/install/))
+Both services are integrated with Docker, so make sure that if you want to use them (at least Prometheus server), you have [docker installed](https://docs.docker.com/install/))
