@@ -1,0 +1,3 @@
+[submodule "Prometheus-Node-Exporter"]
+	path = Prometheus-Node-Exporter
+	url = git@github.com:DSG-UPC/Prometheus-Node-Exporter.git
