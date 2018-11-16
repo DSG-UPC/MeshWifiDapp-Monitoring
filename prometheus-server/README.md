@@ -13,7 +13,7 @@ docker build -t <image-name> .
 Once the image is built, you can execute the server as follows.
 
 ```
-docker run -p 9090:9090 -d <any-name>
+docker run -p 9090:9090 --restart always -d <any-name>
 ```
 
 * **-p** binds a port from our machine to a port on the docker container (machine-port:docker-port)

@@ -14,5 +14,5 @@ Move to the folder containing the Dockerfile (and be sure to have [docker instal
 
 ```
 docker build -t <any-name> .
-docker run -p 9000:9000 -d <any-name>
+docker run --restart always -p 9000:9000 -d <any-name>
 ```
