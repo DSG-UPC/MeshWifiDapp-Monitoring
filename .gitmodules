@@ -1,3 +1,6 @@
 [submodule "Prometheus-Node-Exporter"]
 	path = Prometheus-Node-Exporter
 	url = git@github.com:DSG-UPC/Prometheus-Node-Exporter.git
+[submodule "Prometheus-CRUD-Targets"]
+	path = Prometheus-CRUD-Targets
+	url = git@github.com:DSG-UPC/Prometheus-CRUD-Targets.git
