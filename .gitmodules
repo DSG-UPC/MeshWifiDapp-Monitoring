@@ -4,3 +4,6 @@
 [submodule "Prometheus-CRUD-Targets"]
 	path = Prometheus-CRUD-Targets
 	url = git@github.com:DSG-UPC/Prometheus-CRUD-Targets.git
+[submodule "Prometheus-Lua-Exporter"]
+	path = Prometheus-Lua-Exporter
+	url = git@github.com:DSG-UPC/Prometheus-Lua-Exporter.git
