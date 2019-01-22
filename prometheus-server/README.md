@@ -13,7 +13,16 @@ docker build -t <image-name> .
 Once the image is built, you can execute the server as follows.
 
 ```
-docker run -p 9090:9090 --restart always -d <any-name>
+docker run --rm -d --network=host <image-name>
 ```
 
-* **-p** binds a port from our machine to a port on the docker container (machine-port:docker-port)
+* **-network=host** It takes the network configuration from the host machine the container is running on instead of the own container network.
+
+For prometheus you may have to change the targets it is pointing to (by default is taking ip "localhost:9000"). So for this task you should do the following. Once your Prometheus docker container is running:
+
+```
+docker exec -it <container-name> /bin/sh
+```
+
+You will be inside of the container and you have to go `/etc/prometheus/targets.json` file. You need to edit it using `vi`.
+To add more targets, where you can see "localhost:9000", add the IPs you want to scan in the same way (between double quotes and separated by commas, all of them inside the squared brackets). And that's all, you don't need to restart, Prometheus will be updated automatically.
