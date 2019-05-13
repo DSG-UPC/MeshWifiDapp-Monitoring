@@ -16,7 +16,17 @@ Once the image is built, you can execute the server as follows.
 docker run --rm -d --network=host <image-name>
 ```
 
-* **-network=host** It takes the network configuration from the host machine the container is running on instead of the own container network.
+* **-network=host** takes the network configuration from the host machine the container is running on instead of the own container network.
+
+* **Important if you are using MacOS**. There are some issues with Docker in this OS, mostly with the `--network` option which is not working. There are two possible approaches to follow in order to avoid this problem:
+
+1. You can expose only the 9090 port, because is the one being used:
+
+```
+docker run --rm -d -p 9090:9090 <image-name>
+```
+
+2. You can create a bridge network connection before hand and then use this network configuration as it is explained [in this post](https://stackoverflow.com/questions/52555007/docker-mac-alternative-to-net-host)
 
 For prometheus you may have to change the targets it is pointing to (by default is taking ip "localhost:9000"). So for this task you should do the following. Once your Prometheus docker container is running:
 
